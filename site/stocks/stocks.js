@@ -1,6 +1,5 @@
 /* globals Chart:false, feather:false */
 
-const newsKey = API_KEY;
 const stockKey = API_KEY;
 
 
@@ -55,11 +54,6 @@ function getData(){
         console.log(text);
         document.getElementById('daysValue').innerHTML=text; 
 
-       
-        // //news
-        $.getJSON('https://cors-anywhere.herokuapp.com/http://newsapi.org/v2/everything?q='+symbol.toUpperCase()+'+stock&sortBy=publishedAt&apiKey='+newsKey, function(data) {
-          console.log(data);
-       })
 
       }) 
   }

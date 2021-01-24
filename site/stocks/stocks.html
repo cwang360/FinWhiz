@@ -129,20 +129,24 @@
           would like to see a prediction for. By clicking "Submit", you will be able to see predictions for the 
           company's stock price based on Monte Carlo simulations.
         </p>
-        <table width="100%">
+        <table width="100%" class="form">
           <tr>
-            <td style="padding: 1%"><h6>Company symbol:</h6></td>
-            <td style="padding: 1%" width ="60%"><input type="text" style="width: 50%" name="symbol" id="sym" value="" placeholder="Enter company symbol here" /></td>
+            <td style="padding: 1%; text-align: center"><h6>Company symbol:</h6></td>
+            <td style="padding: 1%" ><input type="text" style="width: 50%" name="symbol" id="sym" value="" placeholder="Enter company symbol here" /></td>
           </tr>
           <tr>
-            <td style="padding: 1%"><h6>Days in the future to predict: </h6></td>
+            <td style="padding: 1% ; text-align: center"><h6>Days in the future to predict: </h6></td>
             <td style="padding: 1%"><input type="range" style="width: 50%" value="50" id="days" min="10" max="100" oninput="this.nextElementSibling.value = this.value">
               <output>50</output></td>
           </tr>
-          <tr>
-            <td style="padding: 1%"><button style="border-radius: 6px; width: 50%" onclick="getData()">Submit</button></td>
-          </tr>
+         
+   
         </table>
+        <div style="margin: 2%; text-align: center">
+          <td style="padding: 1%"><button style="border-radius: 6px; width: 50%" onclick="getData()">Submit</button></td>
+
+        </div>
+
         
         
         
@@ -173,46 +177,8 @@
         may vary slightly for the same company and future prediction each time "submit" is clicked, but they should be nearly
         the same.
       </p>
-      <h2>Section title</h2>
       
-      <div class="table-responsive">
-        <table class="table table-striped table-sm">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Header</th>
-              <th>Header</th>
-              <th>Header</th>
-              <th>Header</th>
-            </tr>
-          </thead>
-          <tbody>
-            
-            <tr>
-              <td>1,009</td>
-              <td>augue</td>
-              <td>semper</td>
-              <td>porta</td>
-              <td>Mauris</td>
-            </tr>
-            <tr>
-              <td>1,010</td>
-              <td>massa</td>
-              <td>Vestibulum</td>
-              <td>lacinia</td>
-              <td>arcu</td>
-            </tr>
-            <tr>
-              <td>1,011</td>
-              <td>eget</td>
-              <td>nulla</td>
-              <td>Class</td>
-              <td>aptent</td>
-            </tr>
-            
-          </tbody>
-        </table>
-      </div>
+     
     </main>
   </div>
 </div>
