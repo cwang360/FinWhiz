@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.79.0">
+    <title>FinWhiz | Stocks</title>
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="../style.css" rel="stylesheet">
+    
+  </head>
+  <body>
+    
+<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="../index.html"><img src="../assets/icon.png" width="30px"> FinWhiz</a>
+  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+</header>
+
+<div class="container-fluid">
+  <div class="row">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <div class="position-sticky pt-3">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <table>
+              <tr>
+                <td style="padding-left: 15px">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                    <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/>
+                  </svg>
+                </td>
+                <td>
+                  <a class="nav-link " aria-current="page" href="../index.html">
+                    <span data-feather="home"></span>
+                    Home
+                  </a>
+                </td>
+              </tr>
+            </table>
+            
+          </li>
+          <li class="nav-item">
+            <table><tr>
+              <td style="padding-left: 15px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-graph-up" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M0 0h1v15h15v1H0V0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5z"/>
+              </svg></td>
+              <td>
+                <a class="nav-link active" href="stocks.html">
+                  <span data-feather="file"></span>
+                    Stocks
+                </a>
+              </td>
+            </tr></table>
+            
+          </li>
+          <li class="nav-item">
+            <table><tr>
+              <td style="padding-left: 15px;"> 
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cash-stack" viewBox="0 0 16 16">
+                  <path d="M1 3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1H1zm7 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
+                  <path d="M0 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V5zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V7a2 2 0 0 1-2-2H3z"/>
+                </svg>
+              </td>
+              <td>
+                <a class="nav-link" href="../loans/loans.html">
+                  Loans
+             </a>
+              </td>
+            </tr></table>
+            
+          </li>
+          <li class="nav-item">
+            <table>
+              <tr>
+                <td style="padding-left: 15px;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shield-fill-plus" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.465 9.99a11.777 11.777 0 0 0 2.517 2.453c.386.273.744.482 1.048.625.28.132.581.24.829.24s.548-.108.829-.24a7.159 7.159 0 0 0 1.048-.625 11.775 11.775 0 0 0 2.517-2.453c1.678-2.195 3.061-5.513 2.465-9.99a1.541 1.541 0 0 0-1.044-1.263 62.467 62.467 0 0 0-2.887-.87C9.843.266 8.69 0 8 0zm-.5 5a.5.5 0 0 1 1 0v1.5H10a.5.5 0 0 1 0 1H8.5V9a.5.5 0 0 1-1 0V7.5H6a.5.5 0 0 1 0-1h1.5V5z"/>
+                  </svg> 
+                </td>
+                <td>
+                  <a class="nav-link" href="../insurance/insurance.html">
+                    Insurance
+                </a>
+                </td>
+              </tr>
+            </table>
+           
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Stocks</h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+          
+          
+        </div>
+
+      </div>
+
+      <div>
+        <p>Enter a company symbol (e.g. AAPL for Apple) below, along with the number of days in the future you
+          would like to see a prediction for. By clicking "Submit", you will be able to see predictions for the 
+          company's stock price based on Monte Carlo simulations.
+        </p>
+        <table width="100%">
+          <tr>
+            <td style="padding: 1%"><h6>Company symbol:</h6></td>
+            <td style="padding: 1%" width ="60%"><input type="text" style="width: 50%" name="symbol" id="sym" value="" placeholder="Enter company symbol here" /></td>
+          </tr>
+          <tr>
+            <td style="padding: 1%"><h6>Days in the future to predict: </h6></td>
+            <td style="padding: 1%"><input type="range" style="width: 50%" value="50" id="days" min="10" max="100" oninput="this.nextElementSibling.value = this.value">
+              <output>50</output></td>
+          </tr>
+          <tr>
+            <td style="padding: 1%"><button style="border-radius: 6px; width: 50%" onclick="getData()">Submit</button></td>
+          </tr>
+        </table>
+        
+        
+        
+        <img id="historicalGraph" style="width:45%; padding:2%" src="">
+        <img id="simulationGraph" style="width:45%; padding:2%" src="">
+        <div style="margin: 0 auto; text-align: center">
+          <img id="distributionGraph" style="width:53%; padding:2%" src="">
+          <p id="daysValue"></p>
+
+        </div>
+  
+        <p id="distValues"></p>
+
+      </div>
+
+      <h2>How Does This Work?</h2>
+      <p>
+        A Monte Carlo simulation uses historical data to simulate future trends. Hundreds of simulations are run,
+        and the end results of all the simulations are used to determine the probability of each result. The 
+        distribution graph shows the distribution of all results from the simulations, and the average price (center of distribution) has 
+        the highest probability of occurring. If enough simulations are run to form a normal distribution, the average and 
+        standard deviation of all simulation results can be used to generate a probability for any result.
+      </p>
+      <p>
+        Note: The simulation and calculations are run on Wolfram-Alpha's servers each time the submit button is clicked,
+        so only 100 simulations are run (to reduce the time needed to display results), which may cause the distribution
+        to be slightly different from a normal distribution. Also, since the calculations are run again each time, results
+        may vary slightly for the same company and future prediction each time "submit" is clicked, but they should be nearly
+        the same.
+      </p>
+      <h2>Section title</h2>
+      
+      <div class="table-responsive">
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Header</th>
+              <th>Header</th>
+              <th>Header</th>
+              <th>Header</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            <tr>
+              <td>1,009</td>
+              <td>augue</td>
+              <td>semper</td>
+              <td>porta</td>
+              <td>Mauris</td>
+            </tr>
+            <tr>
+              <td>1,010</td>
+              <td>massa</td>
+              <td>Vestibulum</td>
+              <td>lacinia</td>
+              <td>arcu</td>
+            </tr>
+            <tr>
+              <td>1,011</td>
+              <td>eget</td>
+              <td>nulla</td>
+              <td>Class</td>
+              <td>aptent</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</div>
+
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+      <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
+      <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"></script>
+      <script src="stocks.js"></script>
+  </body>
+</html>

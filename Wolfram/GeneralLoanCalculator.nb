@@ -1,0 +1,135 @@
+Notebook[{Cell[
+TextData[StyleBox["General Loan Calculator",FontFamily -> "Stencil",
+FontSize -> 18,FontWeight -> "Normal",FontColor -> GrayLevel[0]]],"Text",CellChangeTimes -> {{3.820405748715011*^9,3.82040575882743*^9}},
+ExpressionUUID -> "964048db-9471-4e05-9fc8-28d56afcdf12"],Cell[
+CellGroupData[{Cell[
+
+"\<Mortgage Bar Graph\>","Section",CellChangeTimes -> {{3.8204060163694005`*^9,3.82040601802098*^9},{3.8204061779645987`*^9,3.8204061971478977`*^9},{3.820407189129377*^9,3.820407196137117*^9}},
+ExpressionUUID -> "29526efb-27dd-4540-9388-3f56fe3deed0"],Cell[
+BoxData[""],"Input",
+CellChangeTimes -> {{3.8204165093861856`*^9,3.8204165314867177`*^9},3.8204286796326804`*^9},
+ExpressionUUID -> "55ff95f7-0527-4c91-b09e-97c736113b3e"],Cell[
+CellGroupData[{Cell[
+BoxData[
+RowBox[{"EmbedCode","[","\n",RowBox[{"CloudDeploy","[","\n",RowBox[{"Manipulate","[","\[IndentingNewLine]",RowBox[
+{RowBox[{RowBox[{"lol","=",RowBox[{"{","}"}]}],";","\[IndentingNewLine]","update",";","\[IndentingNewLine]","principal"," ",";","\[IndentingNewLine]",RowBox[
+{"totalPaid"," ","="," ","0"}],";","\[IndentingNewLine]",RowBox[{"numPaymentsLeft"," ","=","totalNumberOfPayments"}],";","\[IndentingNewLine]",RowBox[
+{"periodicInterestRate"," ","="," ",RowBox[{"interestRate","/","compoundFreq"}]}],";","\[IndentingNewLine]",RowBox[
+{"interestPayment","=","0"}],";",RowBox[{"principalPayment","=","0"}],";",RowBox[
+{"mP","=",RowBox[{"principal","*","periodicInterestRate"," ","*",RowBox[{RowBox[{"(",RowBox[
+{RowBox[{"(",RowBox[{"1","+","periodicInterestRate"}],")"}],"^"," ","totalNumberOfPayments"}],")"}],"/",RowBox[
+{"(",RowBox[{RowBox[{RowBox[{"(",RowBox[{"1","+","periodicInterestRate"}],")"}],"^","totalNumberOfPayments"}]," ","-"," ","1"}],")"}]}]}]}],";","\[IndentingNewLine]",RowBox[
+{"balance"," ","="," ","principal"}]," ",";","\[IndentingNewLine]",RowBox[{"While","[",RowBox[
+{RowBox[{"numPaymentsLeft",">","0"}],","," ",RowBox[{RowBox[{"interestPayment","="," ",RowBox[
+{"balance"," ","*"," ",RowBox[{"(",RowBox[{RowBox[{RowBox[{"(",RowBox[{"1","+","periodicInterestRate"}],")"}],"^",RowBox[
+{"(",RowBox[{"compoundFreq","/","paymentFreq"}],")"}]}],"-","1"}],")"}]}]}],";"," ",RowBox[
+{"principalPayment","=",RowBox[{"mP"," ","-"," ","interestPayment"}]}],";",RowBox[
+{"AppendTo","[",RowBox[{"lol",",",RowBox[{"{",RowBox[{"interestPayment",","," ","principalPayment"}],"}"}]}],"]"}]," ",";",RowBox[
+{"balance","-=","  ","principalPayment"}],";",RowBox[{"numPaymentsLeft","--"}],";",RowBox[
+{"totalPaid"," ","+=","mP"}]}]}],"]"}],";","\[IndentingNewLine]","\[IndentingNewLine]",RowBox[
+{"BarChart","[",RowBox[{"lol",","," ",RowBox[{"ChartLegends","\[Rule]",RowBox[{"{",RowBox[
+{"\"Interest\"",","," ","\"Principal\""}],"}"}]}],","," ",RowBox[{"ChartLayout","\[Rule]","\"Stacked\""}],","," ",RowBox[
+{"PlotLabel","\[Rule]",RowBox[{"Style","[",RowBox[{"\"Mortgage Interest vs. Principal Proportions\"",",","\"Title\"",",","12"}],"]"}]}],",",RowBox[
+{"AxesLabel","\[Rule]",RowBox[{"{",RowBox[{"\"Month\"",",",RowBox[{"Style","[",RowBox[
+{"\"\\\"\\!\\(\\*StyleBox[\\\"$US\\\",FontFamily->\\\"Arial\\\"]\\)\\\"\"",",","12"}],"]"}]}],"}"}]}],",",RowBox[
+{"ChartLabels","\[Rule]",RowBox[{"{",RowBox[{RowBox[{"Range","[",RowBox[{"1",","," ","totalNumberOfPayments"}],"]"}],",","None"}],"}"}]}],",",RowBox[
+{"ImageSize","\[Rule]","Large"}]}],"]"}]}],",","\[IndentingNewLine]","\[IndentingNewLine]","\[IndentingNewLine]"," ",RowBox[
+{"{",RowBox[{RowBox[{"{",RowBox[{"principal",","," ","100000",","," ","\"Money Borrowed\""}],"}"}],","," ","1",","," ","1000000"}],"}"}],",",RowBox[
+{"{",RowBox[{RowBox[{"{",RowBox[{"interestRate",","," ","0.05",","," ","\"Interest Rate\""}],"}"}],","," ",".01",",",".50"}],"}"}],"  ",",",RowBox[
+{"{",RowBox[{RowBox[{"{",RowBox[{"compoundFreq",","," ","12",","," ","\"Compound Frequency\""}],"}"}],",","1",",","12"}],"}"}],","," ",RowBox[
+{"{",RowBox[{RowBox[{"{",RowBox[{"paymentFreq",","," ","12",","," ","\"Payment Frequency\""}],"}"}],",","1",","," ","12"}],"}"}],","," ",RowBox[
+{"{",RowBox[{RowBox[{"{",RowBox[{"totalNumberOfPayments",","," ","24",","," ","\"Total Number of Payments\""}],"}"}],","," ","12",",","60"}],"}"}],",","\[IndentingNewLine]","\[IndentingNewLine]",RowBox[
+{"Button","[",RowBox[{"\"update\"",",",RowBox[{"update"," ","=",RowBox[{"1","-","update"}]}],","," ",RowBox[
+{"ImageSize","\[Rule]","Medium"}]}],"]"}],",",RowBox[{"{",RowBox[{RowBox[{"{",RowBox[
+{"update",",","0"}],"}"}],","," ",RowBox[{"ControlType","\[Rule]","None"}]}],"}"}],","," ",RowBox[
+{"TrackedSymbols","\[RuleDelayed]",RowBox[{"{","update","}"}]}]}],"]"}],"\n","]"}],"\n","]"}]],
+"Input",CellChangeTimes -> {{3820423937.982401`,3820423943.3961124`},{3820424051.9537573`,3820424165.4123063`},{3820424232.1176677`,3820424356.4679675`},{3820424855.944279`,3820424865.0052037`},{3820424915.701172`,3820424933.880014`},{3820424979.648307`,3820425021.863386`},{3820426712.0309305`,3820426739.8549013`},{3820426856.7196903`,3820426857.147273`},{3820426987.2396994`,3820426994.6340637`},{3820427036.365466`,3820427117.974093`},{3820427178.4988313`,3820427356.504531`},{3820427427.297619`,3820427455.2759266`},{3820427530.5128183`,3820427575.6808558`},{3820427698.5994015`,3820427699.9758496`},{3820427956.357911`,3820427957.3318467`},3820428181.4577026`,{3820428247.0645847`,3820428248.3915644`},{3820428310.3461213`,3820428343.457181`},{3820428921.8977885`,3820428960.117683`},{3820429027.4911747`,3820429059.7445197`},{3820429106.8042016`,3820429126.215311`},{3820429601.1776047`,3820429601.59332`},{3820429848.9280176`,3820429849.1613255`},{3820429911.883069`,3820429919.1486087`},{3820429990.680778`,3820430002.223116`},{3820430051.092885`,3820430064.786866`},{3820430530.7189665`,3820430555.617655`},{3820430616.231083`,3820430621.6362505`},{3820430675.0196934`,3820430680.2723913`},3820430776.4118476`,{3820430984.058902`,3820431131.0696473`},{3820435912.8279843`,3820436032.443974`},{3820436244.793968`,3820436295.141635`},{3820436338.8365693`,3820436370.2519217`},{3820436426.376844`,3820436468.038436`},{3820436524.3991227`,3820436591.596978`},{3820456712.622855`,3820456713.0108523`},{3820456993.8062906`,3820457063.3634768`},{3820457097.5918903`,3820457101.465612`},{3820457132.389511`,3820457149.337957`},{3820457312.6449437`,3820457317.0574856`},{3820457363.7930613`,3820457379.548295`},{3820457445.9403296`,3820457789.752462`},{3820457820.3296623`,3820457823.2773123`},{3820457886.6112127`,3820457933.3188925`}},
+CellLabel -> "In[80]:= ",ExpressionUUID -> "a08cc708-a3b5-4ff6-a125-b3330e4112df"],Cell[
+BoxData[
+InterpretationBox[FrameBox[PanelBox[TagBox[GridBox[{{StyleBox["\"Embeddable Code\"",
+FontSize -> 14,FontWeight -> Bold,FontColor -> GrayLevel[0.3],StripOnInput -> False]},{StyleBox[
+"\"Use the code below to call the Wolfram Cloud function from HTML:\"",FontSize -> 11,
+FontColor -> RGBColor[0.23,0.23,0.23],StripOnInput -> False]},{FrameBox[TagBox[GridBox[
+{{TagBox[GridBox[{{TagBox[GridBox[{{StyleBox["\"Code\"","ControlStyle",FontWeight -> Bold,
+FontColor -> RGBColor[0.33,0.33,0.33],StripOnInput -> False]},{StyleBox["\"\"",FontColor -> RGBColor[
+0.33,0.33,0.33],FontSize -> 11,StripOnInput -> False]}},GridBoxAlignment -> {"Columns" -> {{Left}}},
+DefaultBaseStyle -> "Column",GridBoxItemSize -> {"Columns" -> {{Automatic}},"Rows" -> {{Automatic}}}],
+"Column"],ItemBox[ButtonBox[TemplateBox[{StyleBox["\"Download Code\"",FontSize -> 12,
+FontColor -> RGBColor[0,0,0],StripOnInput -> False],"https://www.wolframcloud.com/obj/cntawng24/cloudembed-e71.html"},
+"HyperlinkURL"],RuleDelayed[ButtonFunction,Null],FrameMargins -> {{10,10},{3,3}},
+ImageSize -> Automatic,BaseStyle -> "DialogStyle",Evaluator -> None,Appearance -> Automatic,
+Method -> "Preemptive"],Alignment -> Right,ItemSize -> Fit,StripOnInput -> False]}},
+GridBoxAlignment -> {"Columns" -> {{Left}},"Rows" -> {{Top}}},AutoDelete -> False,
+GridBoxItemSize -> {"Columns" -> {{Automatic}},"Rows" -> {{Automatic}}}],"Grid"]},{FrameBox[
+PaneBox[Cell[
+BoxData[StyleBox["\"<iframe src=\\\"https://www.wolframcloud.com/obj/258efb0e-baa7-490e-8043-c887aebb36f0?_embed=iframe\\\" width=\\\"600\\\" height=\\\"800\\\"></iframe>\"",
+FontFamily -> "Courier",FontSize -> 11,StripOnInput -> False]],Deployed -> False,
+Editable -> False,ExpressionUUID -> "c42479e0-beb0-4859-b5c4-db0b6b3bb476"],ImageSize -> {Scaled[
+1],60},Scrollbars -> Automatic,AppearanceElements -> {}],FrameStyle -> RGBColor[0.69,
+0.69,0.69],Background -> GrayLevel[1],BaseStyle -> "StandardForm",StripOnInput -> False]}},
+GridBoxAlignment -> {"Columns" -> {{Left}}},DefaultBaseStyle -> "Column",GridBoxItemSize -> {"Columns" -> {{Fit}},"Rows" -> {{Fit}}},
+GridBoxSpacings -> {"Columns" -> {{0}},"Rows" -> {0.2,{0.5}}}],"Column"],Background -> RGBColor[
+0.96,0.96,0.96],FrameMargins -> {{14,14},{14,10}},FrameStyle -> RGBColor[0.69,0.69,
+0.69],StripOnInput -> False]}},GridBoxAlignment -> {"Columns" -> {{Left}}},DefaultBaseStyle -> "Column",
+GridBoxItemSize -> {"Columns" -> {{Automatic}},"Rows" -> {{Automatic}}},GridBoxSpacings -> {"Columns" -> {{0}},"Rows" -> {0.3,0.4,0.8,1.5}}],
+"Column"],BaseStyle -> {"Deploy"},ImageSize -> 750,Background -> RGBColor[0.87,0.87,
+0.87]],RoundingRadius -> 6,FrameMargins -> {{2,2},{1,1}},Background -> RGBColor[0.87,
+0.87,0.87],FrameStyle -> RGBColor[0.76,0.76,0.76],StripOnInput -> False],EmbeddingObject[
+Association["EnvironmentName" -> "HTML","CodeSection" -> Association["Content" -> "<iframe src=\"https://www.wolframcloud.com/obj/258efb0e-baa7-490e-8043-c887aebb36f0?_embed=iframe\" width=\"600\" height=\"800\"></iframe>",
+"Title" -> Automatic,"Filename" -> "cloudembed.html"],"CloudObject" -> CloudObject[
+"https://www.wolframcloud.com/obj/258efb0e-baa7-490e-8043-c887aebb36f0"]]]],StandardForm],
+"Output",CellLabel -> "Out[80]= ",ExpressionUUID -> "23b03037-258a-45c3-ab78-9901e2893b95"]},
+Open],ExpressionUUID -> "e6a31ee4-2659-4578-9e5c-4b78b8804a48"],Cell[
+CellGroupData[
+{Cell[
+BoxData[""],"Input",ExpressionUUID -> "760d6203-e020-49b1-b43b-daccd05feccc"],Cell[
+BoxData[
+TagBox[StyleBox[DynamicModuleBox[{Set[$CellContext`compoundFreq$$,12],Set[$CellContext`interestRate$$,
+0.05],Set[$CellContext`paymentFreq$$,12],Set[$CellContext`principal$$,100000],Set[
+$CellContext`totalNumberOfPayments$$,39.],Set[$CellContext`update$$,0],Set[Typeset`show$$,
+True],Set[Typeset`bookmarkList$$,{}],Set[Typeset`bookmarkMode$$,"Menu"],Typeset`animator$$,Set[
+Typeset`animvar$$,1],Set[Typeset`name$$,"\"untitled\""],Set[Typeset`specs$$,{{{Hold[
+$CellContext`principal$$],100000,"Money Borrowed"},1,1000000},{{Hold[$CellContext`interestRate$$],0.05,"Interest Rate"},0.01,0.5},{{Hold[
+$CellContext`compoundFreq$$],12,"Compound Frequency"},1,12},{{Hold[$CellContext`paymentFreq$$],12,"Payment Frequency"},1,12},{{Hold[
+$CellContext`totalNumberOfPayments$$],24,"Total Number of Payments"},12,60},{Hold[
+Button["update",Set[$CellContext`update$$,Plus[1,Minus[$CellContext`update$$]]],ImageSize -> Medium]],Manipulate`Dump`ThisIsNotAControl},{{Hold[
+$CellContext`update$$],0}}}],Set[Typeset`size$$,{595.,{169.,174.}}],Set[Typeset`update$$,
+0],Typeset`initDone$$,Set[Typeset`skipInitDone$$,True]},DynamicBox[Manipulate`ManipulateBoxes[
+1,StandardForm,RuleDelayed["Variables",{Set[$CellContext`compoundFreq$$,12],Set[$CellContext`interestRate$$,
+0.05],Set[$CellContext`paymentFreq$$,12],Set[$CellContext`principal$$,100000],Set[
+$CellContext`totalNumberOfPayments$$,24],Set[$CellContext`update$$,0]}],RuleDelayed[
+"ControllerVariables",{}],RuleDelayed["OtherVariables",{Typeset`show$$,Typeset`bookmarkList$$,Typeset`bookmarkMode$$,Typeset`animator$$,Typeset`animvar$$,Typeset`name$$,Typeset`specs$$,Typeset`size$$,Typeset`update$$,Typeset`initDone$$,Typeset`skipInitDone$$}],
+RuleDelayed["Body",CompoundExpression[Set[$CellContext`lol,{}],$CellContext`update$$,
+$CellContext`principal$$,Set[$CellContext`totalPaid,0],Set[$CellContext`numPaymentsLeft,
+$CellContext`totalNumberOfPayments$$],Set[$CellContext`periodicInterestRate,Times[
+$CellContext`interestRate$$,Power[$CellContext`compoundFreq$$,-1]]],Set[$CellContext`interestPayment,
+0],Set[$CellContext`principalPayment,0],Set[$CellContext`mP,Times[$CellContext`principal$$,
+$CellContext`periodicInterestRate,Times[Power[Plus[1,$CellContext`periodicInterestRate],
+$CellContext`totalNumberOfPayments$$],Power[Plus[Power[Plus[1,$CellContext`periodicInterestRate],
+$CellContext`totalNumberOfPayments$$],-1],-1]]]],Set[$CellContext`balance,$CellContext`principal$$],
+While[Greater[$CellContext`numPaymentsLeft,0],CompoundExpression[Set[$CellContext`interestPayment,
+Times[$CellContext`balance,Plus[Power[Plus[1,$CellContext`periodicInterestRate],Times[
+$CellContext`compoundFreq$$,Power[$CellContext`paymentFreq$$,-1]]],-1]]],Set[$CellContext`principalPayment,
+Plus[$CellContext`mP,Minus[$CellContext`interestPayment]]],AppendTo[$CellContext`lol,
+{$CellContext`interestPayment,$CellContext`principalPayment}],SubtractFrom[$CellContext`balance,
+$CellContext`principalPayment],Decrement[$CellContext`numPaymentsLeft],AddTo[$CellContext`totalPaid,
+$CellContext`mP]]],BarChart[$CellContext`lol,ChartLegends -> {"Interest","Principal"},
+ChartLayout -> "Stacked",PlotLabel -> Style["Mortgage Interest vs. Principal Proportions",
+"Title",12],AxesLabel -> {"Month",Style["\!\(\*StyleBox[\"$US\",FontFamily->\"Arial\"]\)",
+12]},ChartLabels -> {Range[1,$CellContext`totalNumberOfPayments$$],None},ImageSize -> Large]]],
+RuleDelayed["Specifications",{{{$CellContext`principal$$,100000,"Money Borrowed"},1,1000000},{{$CellContext`interestRate$$,0.05,"Interest Rate"},0.01,0.5},{{$CellContext`compoundFreq$$,12,"Compound Frequency"},1,12},{{$CellContext`paymentFreq$$,12,"Payment Frequency"},1,12},{{$CellContext`totalNumberOfPayments$$,24,"Total Number of Payments"},12,60},Button[
+"update",Set[$CellContext`update$$,Plus[1,Minus[$CellContext`update$$]]],ImageSize -> Medium],{{$CellContext`update$$,0},ControlType -> None}}],
+RuleDelayed["Options",{RuleDelayed[TrackedSymbols,{$CellContext`update$$}]}],RuleDelayed[
+"DefaultOptions",{}]],ImageSizeCache -> {642.,{276.,282.}},SingleEvaluation -> True],
+RuleDelayed[Deinitialization,None],RuleDelayed[DynamicModuleValues,{}],SynchronousInitialization -> True,
+RuleDelayed[UndoTrackedVariables,{Typeset`show$$,Typeset`bookmarkMode$$}],RuleDelayed[
+UnsavedVariables,{Typeset`initDone$$}],RuleDelayed[UntrackedVariables,{Typeset`size$$}],
+ExpressionUUID -> "9fd7a7ef-a3bc-4b7a-b06b-6770c36ad6f0"],"Manipulate",Deployed -> True,
+StripOnInput -> False],Manipulate`InterpretManipulate[1]]],"Output",CellChangeTimes -> {3.82045702722757*^9,3.820457069416189*^9,3.8204576137254553`*^9,3.8204577284621534`*^9,3.820457792991005*^9,{3.8204578919653854`*^9,3.8204579355272183`*^9}},
+CellLabel -> "Out[21]=",ExpressionUUID -> "e5aeecbc-5130-45ac-924a-3fdf8c9475f7"]},
+Open],ExpressionUUID -> "3deecbbd-d0e7-4dd8-844a-c9253c4083af"],Cell[
+BoxData[""],
+"Input",CellChangeTimes -> {{3.8204291955621967`*^9,3.8204292763412013`*^9},{3.820429314700526*^9,3.8204294982822933`*^9}},
+ExpressionUUID -> "a5b8a7ed-6fd5-49da-b8a0-4107bba6d460"]},Open],ExpressionUUID -> "d9170ed4-a9de-4c7c-82cc-2f9263a50888"]},
+StyleDefinitions -> "Default.nb",WindowSize -> {1029.6,585.6},WindowMargins -> {{-6.6,Automatic},{Automatic,0}},
+FrontEndVersion -> "12.2 for Wolfram Cloud 1.57.0.2 (December 8, 2020)",TaggingRules -> {"WelcomeScreenSettings" -> {"FEStarting" -> False},"TryRealOnly" -> False,"EmailToDialog" -> {"FileSize" -> 0}}]
