@@ -1,20 +1,12 @@
 /* globals Chart:false, feather:false */
 
-const newsKey = "60ace632d35e40c5a1d9328aaa00f3f2";
-const stockKey = "2I5IPQLNO9YRM733";
+const newsKey = API_KEY;
+const stockKey = API_KEY;
 
 
 
 function getData(){
-  // console.log("fetching data");
-  // $.getJSON('https://cors-anywhere.herokuapp.com/http://api.wolframalpha.com/v2/query?appid=AUV293-PPVP2KJUWA&output=json&input=Doppler%20shift&includepodid=Result&format=image', function(data) {
-  //     console.log(data);
-  //     var url = data.queryresult.pods[0].subpods[0].img.src;
-  //     console.log(url);
-  //     document.getElementById('myImage').src=url;
-  // }) 
-  // document.getElementById('myImage').src="https://www.wolframcloud.com/obj/5f3ba8c4-9c6a-4bdf-8862-18c99f2b866d?x=5&y=4";
-  
+
   var symbol = document.getElementById("sym").value;
   var daysAhead = document.getElementById("days").value;
     console.log(symbol);
