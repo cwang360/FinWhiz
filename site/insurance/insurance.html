@@ -135,10 +135,10 @@
           <td><label for="medal">Medal level:</label></td>
           <td>
             <select name="medal" id="medal">
-              <option value="Bronze(40% : 60%)">Bronze(40% : 60%)</option>
-              <option value="Silver(30% : 70%)">Silver(30% : 70%)</option>
-              <option value="Gold(20% : 80%)">Gold(20% : 80%)</option>
-              <option value="Platinum(10% : 90%)">Platinum(10% : 90%)</option>
+              <option value="Bronze">Bronze(40% : 60%)</option>
+              <option value="Silver">Silver(30% : 70%)</option>
+              <option value="Gold">Gold(20% : 80%)</option>
+
             </select>
           </td>
         </tr>
@@ -160,8 +160,8 @@
           </td>
           <td>
             <select name="state" id="state">
-              <option value="Georgia">Georgia</option>
-              <option value="Delaware">Delaware</option>
+              <option value="GA">Georgia</option>
+              <option value="DE">Delaware</option>
             </select>
           </td>
         </tr>
@@ -187,15 +187,14 @@
           </td>
         </tr>
       </table>
-      <div style="margin: 2%">      <button style="border-radius: 6px; width: 50%; margin: auto" onclick="getData()">Submit</button>
+      <div style="margin: 2%">      <button id="subButton" style="border-radius: 6px; width: 50%; margin: auto" onclick="getData()">Submit</button>
       </div>
-      <img id="insuranceGraph" src = "">
+      <img id="insuranceGraph" style="margin: 5%" src = "">
     </div>
       <div>
       <h2>How Does This Work?</h2>
       <p>
-        Each payment is divided into two parts, principal and interest, to show the proportion/amount of your payment that is
-        for your principal compared to the interest that also comes with the loan.
+        This is a health insurance filter. Behind the scene is a database of every health insurance (in 2016) in the United States. With the selection of a couple of factors, we can narrow down what plans you should pick based on your preferences.
       </p>
   
       
