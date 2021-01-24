@@ -9,3 +9,5 @@ The bulk of the computation and graphing behind the project is done by custome W
 - Wolfram Alpha 
 - Alpha Vantage API (for stock prices)
 - HTML, CSS, JS, JQuery, Bootstrap
+# Databases Used:
+- https://www.kaggle.com/hhs/health-insurance-marketplace?select=PlanAttributes.csv
